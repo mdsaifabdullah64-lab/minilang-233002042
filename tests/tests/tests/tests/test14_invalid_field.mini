@@ -1,0 +1,7 @@
+struct42 Student42 {
+    int42 id42;
+}
+
+Student42 s42;
+
+s42.age42 = 20;
