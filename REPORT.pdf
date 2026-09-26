@@ -1,0 +1,13 @@
+REPORT.pdf
+
+1. Introduction
+2. Language Design
+3. Lexer and Parser
+4. Semantic Analysis
+5. Structs and Static Scoping
+6. TAC and Optimizations
+7. Backend and Runtime
+8. Testing
+9. Bug Encountered and Debugging
+10. Future Improvement
+11. Conclusion
