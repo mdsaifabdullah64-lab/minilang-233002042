@@ -1,0 +1,12 @@
+func42 outer42(int42 x42) int42 {
+
+    int42 y42;
+
+    y42 = 20;
+
+    func42 inner42(int42 z42) int42 {
+        return42 x42 + y42 + z42;
+    }
+
+    return42 inner42(10);
+}
