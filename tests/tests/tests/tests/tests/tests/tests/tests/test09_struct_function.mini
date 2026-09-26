@@ -1,0 +1,7 @@
+struct42 Student42 {
+    int42 marks42;
+}
+
+func42 getMarks42(Student42 s42) int42 {
+    return42 s42.marks42;
+}
