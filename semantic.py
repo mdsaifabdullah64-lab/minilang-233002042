@@ -1,36 +1,26 @@
-class SemanticError(Exception):
-    pass
+def check_struct(self, node):
+    if self.symbol_table.lookup(node.name):
+        self.error(
+            f"Duplicate struct declaration '{node.name}'"
+        )
+        return
 
+    fields = {}
 
-class SemanticAnalyzer:
+    for field_name, field_type in node.fields:
 
-    def __init__(self):
-        self.errors = []
+        if field_name in fields:
+            self.error(
+                f"Duplicate field '{field_name}' "
+                f"in struct '{node.name}'"
+            )
 
-    def error(self, message, line=None, column=None):
-        if line is not None:
-            message = f"Line {line}, Column {column}: {message}"
+        fields[field_name] = field_type
 
-        self.errors.append(message)
-
-    def analyze(self, ast):
-        # AST-এর semantic analysis শুরু হবে
-        pass
-
-    def check_variable_declaration(self, node):
-        pass
-
-    def check_assignment(self, node):
-        pass
-
-    def check_function(self, node):
-        pass
-
-    def check_struct(self, node):
-        pass
-
-    def check_expression(self, node):
-        pass
-
-    def check_return(self, node):
-        pass
+    self.symbol_table.define(
+        Symbol(
+            node.name,
+            fields,
+            "struct"
+        )
+    )
