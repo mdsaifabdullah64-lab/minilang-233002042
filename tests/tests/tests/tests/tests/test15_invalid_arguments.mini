@@ -1,0 +1,5 @@
+func42 add42(int42 a42, int42 b42) int42 {
+    return42 a42 + b42;
+}
+
+add42(10);
