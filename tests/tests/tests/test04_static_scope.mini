@@ -1,0 +1,12 @@
+func42 outer42() int42 {
+
+    int42 x42;
+
+    x42 = 100;
+
+    func42 inner42() int42 {
+        return42 x42;
+    }
+
+    return42 inner42();
+}
