@@ -1,0 +1,9 @@
+struct42 Person42 {
+    int42 age42;
+    int42 salary42;
+}
+
+Person42 p42;
+
+p42.age42 = 21;
+p42.salary42 = 50000;
